@@ -10,24 +10,34 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
-*.local
+
+# Local environment files
 .env
 .env.*
 !.env.example
+.env.local
+.env.*.local
+
+# Supabase / local secrets
 supabase/functions/.env
 supabase/functions/.env.*
-!supabase/functions/.env.example
+!.supabase/functions/.env.example
 
-# Private setup evidence is for local reference only.
-/docs/web3forms-setup-proof.png
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# OS/editor files
 .DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Private local artifacts
+/docs/private/
+/docs/web3forms-setup-proof.png
+*.pem
+*.key
+*.crt
